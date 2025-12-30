@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "StarKids - Educação Musical Infantil",
   description: "Desperte o talento musical do seu filho com metodologia comprovada e ambiente acolhedor",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -27,13 +32,12 @@ export default function RootLayout({
             <div className="grid md:grid-cols-4 gap-8 mb-8">
               {/* Logo e Descrição */}
               <div className="md:col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">★</span>
-                  </div>
-                  <span className="text-2xl font-bold">
-                    Star<span className="text-primary-400">Kids</span>
-                  </span>
+                <div className="mb-4">
+                  <img 
+                    src="/logo.png" 
+                    alt="StarKids Logo" 
+                    className="h-12 w-auto mb-4 brightness-0 invert"
+                  />
                 </div>
                 <p className="text-gray-400 max-w-md">
                   Transformando vidas através da música, com metodologia comprovada 
@@ -84,7 +88,7 @@ export default function RootLayout({
 
             {/* Copyright */}
             <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-              <p>© 2024 StarKids. Todos os direitos reservados.</p>
+              <p>© 2025 StarKids. Todos os direitos reservados.</p>
             </div>
           </div>
         </footer>
