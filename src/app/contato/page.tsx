@@ -321,44 +321,47 @@ ${formData.mensagem}`;
                 </div>
               </div>
             </Card>
-
-            <Card className="bg-[#ffb300]/10 backdrop-blur-sm border border-[#ffb300]/20 shadow-xl h-fit">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Agende uma visita
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Venha conhecer nossa estrutura pessoalmente e ver de perto 
-                como trabalhamos. Será um prazer receber você e sua família!
-              </p>
-              <Button href="/planos" variant="secondary" className="w-full">
-                Ver nossos planos
-              </Button>
-            </Card>
-
-            <Card className="border border-[#1890ff]/10 shadow-xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Perguntas frequentes
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    A partir de que idade posso matricular meu filho?
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Aceitamos alunos a partir de 4 anos de idade.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    Preciso ter instrumento em casa?
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Não inicialmente. Fornecemos orientação para aquisição quando necessário.
-                  </p>
-                </div>
-              </div>
-            </Card>
           </div>
+        </div>
+
+        {/* FAQ e Agende uma visita */}
+        <div className="mt-16 grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <Card className="border border-[#1890ff]/10 shadow-xl h-full">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Perguntas frequentes
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  A partir de que idade posso matricular meu filho?
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Aceitamos alunos a partir de 4 anos de idade.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Preciso ter instrumento em casa?
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Não inicialmente. Fornecemos orientação para aquisição quando necessário.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-[#ffb300]/10 backdrop-blur-sm border border-[#ffb300]/20 shadow-xl h-full">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Agende uma visita
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Venha conhecer nossa estrutura pessoalmente e ver de perto 
+              como trabalhamos. Será um prazer receber você e sua família!
+            </p>
+            <Button href="/planos" variant="secondary" className="w-full">
+              Ver nossos planos
+            </Button>
+          </Card>
         </div>
 
         {/* Nossas Unidades */}

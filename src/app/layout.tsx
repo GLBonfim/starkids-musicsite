@@ -33,7 +33,7 @@ export default function RootLayout({
         </div>
         
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
+        <footer className="bg-[#0077BE] text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-8 mb-8">
               {/* Logo e Descrição */}
@@ -45,7 +45,7 @@ export default function RootLayout({
                     className="h-12 w-auto mb-4"
                   />
                 </div>
-                <p className="text-gray-400 max-w-md">
+                <p className="text-white/80 max-w-md">
                   Transformando vidas através da música, com metodologia comprovada 
                   e ambiente acolhedor para o desenvolvimento integral das crianças.
                 </p>
@@ -56,7 +56,7 @@ export default function RootLayout({
               {/* Barra da Tijuca */}
               <div>
                 <h3 className="font-bold mb-4">Barra da Tijuca</h3>
-                <ul className="space-y-2 text-gray-400 text-sm">
+                <ul className="space-y-2 text-white/80 text-sm">
                   <li>(21) 3269-0456</li>
                   <li>(21) 98273-9509</li>
                   <li>
@@ -69,7 +69,7 @@ export default function RootLayout({
               {/* Contato */}
               <div>
                 <h3 className="font-bold mb-4">Recreio</h3>
-                <ul className="space-y-2 text-gray-400 text-sm">
+                <ul className="space-y-2 text-white/80 text-sm">
                   <li>(21) 3264-0456</li>
                   <li>(21) 98273-9509</li>
                   <li>
@@ -84,22 +84,22 @@ export default function RootLayout({
                 <h3 className="font-bold mb-4">Links Rápidos</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="/" className="text-white/80 hover:text-[#ffb300] transition-colors">
                       Início
                     </a>
                   </li>
                   <li>
-                    <a href="/planos" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="/planos" className="text-white/80 hover:text-[#ffb300] transition-colors">
                       Nossos Planos
                     </a>
                   </li>
                   <li>
-                    <a href="/seja-franqueado" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="/seja-franqueado" className="text-white/80 hover:text-[#ffb300] transition-colors">
                       Seja um Franqueado
                     </a>
                   </li>
                   <li>
-                    <a href="/contato" className="text-gray-400 hover:text-white transition-colors">
+                    <a href="/contato" className="text-white/80 hover:text-[#ffb300] transition-colors">
                       Contato
                     </a>
                   </li>
@@ -110,7 +110,7 @@ export default function RootLayout({
             </div>
 
             {/* Copyright */}
-            <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <div className="border-t border-white/20 pt-8 text-center text-white/80 text-sm">
               <p>© 2024 StarKids. Todos os direitos reservados.</p>
             </div>
           </div>
