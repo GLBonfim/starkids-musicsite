@@ -64,7 +64,7 @@ export default function TestimonialCarousel() {
     <div className="relative max-w-4xl mx-auto">
       {/* Aspas decorativas */}
       <svg 
-        className="w-12 h-12 text-primary-300 mx-auto mb-6" 
+        className="w-12 h-12 text-[#1890ff] mx-auto mb-6" 
         fill="currentColor" 
         viewBox="0 0 24 24"
       >
@@ -104,7 +104,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={prevTestimonial}
           disabled={isAnimating}
-          className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg hover:bg-primary-50 transition-all duration-200 flex items-center justify-center text-primary-500 disabled:opacity-50"
+          className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg hover:bg-[#ffb300] transition-all duration-200 flex items-center justify-center text-[#1890ff] hover:text-white disabled:opacity-50"
           aria-label="Depoimento anterior"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,8 +121,8 @@ export default function TestimonialCarousel() {
               disabled={isAnimating}
               className={`h-2 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'w-8 bg-primary-500'
-                  : 'w-2 bg-gray-300 hover:bg-primary-300'
+                  ? 'w-8 bg-[#1890ff]'
+                  : 'w-2 bg-gray-300 hover:bg-[#ffb300]'
               }`}
               aria-label={`Ir para depoimento ${index + 1}`}
             />
@@ -132,7 +132,7 @@ export default function TestimonialCarousel() {
         <button
           onClick={nextTestimonial}
           disabled={isAnimating}
-          className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg hover:bg-primary-50 transition-all duration-200 flex items-center justify-center text-primary-500 disabled:opacity-50"
+          className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg hover:bg-[#ffb300] transition-all duration-200 flex items-center justify-center text-[#1890ff] hover:text-white disabled:opacity-50"
           aria-label="Próximo depoimento"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

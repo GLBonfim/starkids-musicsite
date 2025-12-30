@@ -11,28 +11,28 @@ const config: Config = {
       colors: {
         // Paleta suave e profissional
         primary: {
-          50: '#f0f7ff',
-          100: '#e0effe',
-          200: '#b9ddfe',
-          300: '#7cc5fd',
-          400: '#36a9fa',
-          500: '#0c8ce9', // Azul principal suave
-          600: '#006dc7',
-          700: '#0157a1',
-          800: '#064a85',
-          900: '#0b3e6e',
+          50: '#e6f7ff',
+          100: '#bae7ff',
+          200: '#91d5ff',
+          300: '#69c0ff',
+          400: '#40a9ff',
+          500: '#1890ff', // Azul vibrante principal
+          600: '#096dd9',
+          700: '#0050b3',
+          800: '#003a8c',
+          900: '#002766',
         },
         accent: {
-          50: '#fffbeb',
-          100: '#fff3c6',
-          200: '#ffe588',
-          300: '#ffd24a', // Amarelo suave para CTAs
-          400: '#ffbb20',
-          500: '#f99607',
-          600: '#dd6d02',
-          700: '#b74b06',
-          800: '#94390c',
-          900: '#7a300d',
+          50: '#fffbea',
+          100: '#fff3c4',
+          200: '#ffe58f',
+          300: '#ffd666',
+          400: '#ffc53d',
+          500: '#ffb300', // Amarelo vibrante para CTAs
+          600: '#fa8c16',
+          700: '#d46b08',
+          800: '#ad4e00',
+          900: '#873800',
         },
       },
       fontFamily: {

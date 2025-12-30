@@ -25,9 +25,9 @@ export default function Button({
   
   // Variantes de cor
   const variants = {
-    primary: 'bg-accent-300 text-gray-900 hover:bg-accent-400 focus:ring-accent-300 shadow-sm hover:shadow-md',
-    secondary: 'bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 shadow-sm hover:shadow-md',
-    outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 focus:ring-primary-500',
+    primary: 'bg-[#ffb300] text-gray-900 hover:bg-[#ffa000] focus:ring-[#ffb300] shadow-sm hover:shadow-md font-semibold',
+    secondary: 'bg-[#1890ff] text-white hover:bg-[#096dd9] focus:ring-[#1890ff] shadow-sm hover:shadow-md',
+    outline: 'border-2 border-[#1890ff] text-[#1890ff] hover:bg-[#1890ff] hover:text-white focus:ring-[#1890ff]',
   };
   
   // Tamanhos

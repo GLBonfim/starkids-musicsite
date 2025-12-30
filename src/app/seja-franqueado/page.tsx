@@ -83,13 +83,13 @@ export default function SejaFranqueadoPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white pt-32 pb-20">
+    <main className="min-h-screen pt-32 pb-20 bg-gradient-to-b from-yellow-50/20 via-blue-50/20 to-pink-50/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Seja um franqueado
-            <span className="text-primary-500"> StarKids</span>
+            <span className="text-[#1890ff]"> StarKids</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Transforme sua paixão por educação em um negócio de sucesso. 
@@ -108,7 +108,7 @@ export default function SejaFranqueadoPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {beneficios.map((beneficio, index) => (
               <Card key={index} hover>
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 text-primary-500">
+                <div className="w-16 h-16 bg-[#ffb300] rounded-full flex items-center justify-center mb-6 text-white">
                   {beneficio.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -124,14 +124,14 @@ export default function SejaFranqueadoPage() {
 
         {/* Investimento */}
         <section className="mb-20">
-          <Card className="bg-gradient-to-br from-primary-50 to-white">
+          <Card className="bg-[#1890ff]/10 backdrop-blur-sm border border-[#1890ff]/20 shadow-xl">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
                 Investimento e Retorno
               </h2>
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-primary-500 mb-2">
+                  <div className="text-4xl font-bold text-[#1890ff] mb-2">
                     R$ 150k
                   </div>
                   <p className="text-gray-600 font-medium">Investimento inicial</p>
@@ -140,7 +140,7 @@ export default function SejaFranqueadoPage() {
                   </p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary-500 mb-2">
+                  <div className="text-4xl font-bold text-[#FF6B9D] mb-2">
                     18-24
                   </div>
                   <p className="text-gray-600 font-medium">Meses de payback</p>
@@ -149,7 +149,7 @@ export default function SejaFranqueadoPage() {
                   </p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary-500 mb-2">
+                  <div className="text-4xl font-bold text-[#ffb300] drop-shadow-md mb-2">
                     30%+
                   </div>
                   <p className="text-gray-600 font-medium">Margem de lucro</p>
@@ -171,7 +171,7 @@ export default function SejaFranqueadoPage() {
             {etapas.map((etapa, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-primary-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                  <div className="w-20 h-20 bg-[#1890ff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                     {etapa.numero}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -182,7 +182,7 @@ export default function SejaFranqueadoPage() {
                   </p>
                 </div>
                 {index < etapas.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[60%] w-full h-0.5 bg-primary-200" />
+                  <div className="hidden lg:block absolute top-10 left-[60%] w-full h-0.5 bg-[#ffb300]" />
                 )}
               </div>
             ))}
@@ -191,9 +191,9 @@ export default function SejaFranqueadoPage() {
 
         {/* Depoimento */}
         <section className="mb-20">
-          <Card className="bg-primary-50">
+          <Card className="bg-[#FF6B9D]/10 backdrop-blur-sm">
             <div className="text-center max-w-3xl mx-auto">
-              <svg className="w-12 h-12 text-primary-300 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-12 h-12 text-[#FF6B9D] mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <blockquote className="text-xl md:text-2xl text-gray-700 mb-6 font-medium italic">
@@ -209,7 +209,7 @@ export default function SejaFranqueadoPage() {
 
         {/* CTA Final */}
         <section className="text-center">
-          <Card className="bg-gradient-to-br from-primary-500 to-primary-600 text-white">
+          <Card className="bg-gradient-to-br from-[#1890ff] to-[#096dd9] text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Pronto para começar?
             </h2>

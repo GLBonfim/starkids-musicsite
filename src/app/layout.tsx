@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import LoadingScreen from "@/components/home/LoadingScreen";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +25,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
+        <LoadingScreen />
+        <AnimatedBackground />
         <Navbar />
-        {children}
+        <div className="relative z-10">
+          {children}
+        </div>
         
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
@@ -36,13 +42,41 @@ export default function RootLayout({
                   <img 
                     src="/logo.png" 
                     alt="StarKids Logo" 
-                    className="h-12 w-auto mb-4 brightness-0 invert"
+                    className="h-12 w-auto mb-4"
                   />
                 </div>
                 <p className="text-gray-400 max-w-md">
                   Transformando vidas através da música, com metodologia comprovada 
                   e ambiente acolhedor para o desenvolvimento integral das crianças.
                 </p>
+              </div>
+
+              
+
+              {/* Barra da Tijuca */}
+              <div>
+                <h3 className="font-bold mb-4">Barra da Tijuca</h3>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li>(21) 3269-0456</li>
+                  <li>(21) 98273-9509</li>
+                  <li>
+                    Av. Gastão Sengés, 185<br />
+                    Loja 129 - Barra, RJ
+                  </li>
+                </ul>
+              </div>
+
+              {/* Contato */}
+              <div>
+                <h3 className="font-bold mb-4">Recreio</h3>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li>(21) 3264-0456</li>
+                  <li>(21) 98273-9509</li>
+                  <li>
+                    Rua Senador Rui Carneiro, 301<br />
+                    Loja C - Recreio, RJ
+                  </li>
+                </ul>
               </div>
 
               {/* Links Rápidos */}
@@ -72,23 +106,12 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Contato */}
-              <div>
-                <h3 className="font-bold mb-4">Contato</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>(11) 9999-9999</li>
-                  <li>contato@starkids.com.br</li>
-                  <li>
-                    Av. Paulista, 1000<br />
-                    São Paulo - SP
-                  </li>
-                </ul>
-              </div>
+              
             </div>
 
             {/* Copyright */}
             <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-              <p>© 2025 StarKids. Todos os direitos reservados.</p>
+              <p>© 2024 StarKids. Todos os direitos reservados.</p>
             </div>
           </div>
         </footer>

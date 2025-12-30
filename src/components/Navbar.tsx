@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#0077BE]/90 backdrop-blur-md shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -25,8 +25,8 @@ export default function Navbar() {
               alt="StarKids Logo" 
               className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold text-gray-900">
-              Star<span className="text-primary-500">Kids</span>
+            <span className="text-2xl font-bold text-white">
+              Star<span className="text-[#ffb300]">Kids</span>
             </span>
           </Link>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-500 transition-colors font-medium"
+                className="text-white/90 hover:text-[#ffb300] transition-colors font-medium"
               >
                 {item.label}
               </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 text-white"
             aria-label="Toggle menu"
           >
             <svg
@@ -72,12 +72,12 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-3">
+          <div className="md:hidden pb-4 space-y-3 border-t border-white/10 pt-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-primary-500 transition-colors font-medium"
+                className="block py-2 text-white/90 hover:text-[#ffb300] transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
