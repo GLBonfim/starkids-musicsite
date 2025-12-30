@@ -1,36 +1,249 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StarKids - Site Educacional
 
-## Getting Started
+Site profissional para escola de música infantil desenvolvido com Next.js 14, TypeScript e Tailwind CSS.
 
-First, run the development server:
+## 📋 Estrutura do Projeto
+
+```
+starkids-website/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── globals.css
+│   │   ├── planos/
+│   │   │   └── page.tsx
+│   │   ├── contato/
+│   │   │   └── page.tsx
+│   │   └── seja-franqueado/
+│   │       └── page.tsx
+│   └── components/
+│       ├── Navbar.tsx
+│       ├── Button.tsx
+│       └── Card.tsx
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+├── postcss.config.mjs
+└── next.config.mjs
+```
+
+## 🚀 Instalação
+
+### Passo 1: Criar o projeto Next.js
+
+```bash
+npx create-next-app@latest starkids-website --typescript --tailwind --app
+```
+
+Quando perguntado, escolha:
+- ✅ TypeScript: Yes
+- ✅ ESLint: Yes
+- ✅ Tailwind CSS: Yes
+- ✅ `src/` directory: Yes
+- ✅ App Router: Yes
+- ❌ Customize default import alias: No
+
+### Passo 2: Navegar para a pasta do projeto
+
+```bash
+cd starkids-website
+```
+
+### Passo 3: Criar estrutura de pastas
+
+```bash
+# Windows (PowerShell)
+New-Item -ItemType Directory -Force -Path src/components
+New-Item -ItemType Directory -Force -Path src/app/planos
+New-Item -ItemType Directory -Force -Path src/app/contato
+New-Item -ItemType Directory -Force -Path src/app/seja-franqueado
+
+# macOS/Linux
+mkdir -p src/components
+mkdir -p src/app/planos
+mkdir -p src/app/contato
+mkdir -p src/app/seja-franqueado
+```
+
+### Passo 4: Copiar os arquivos
+
+Copie o conteúdo de cada arquivo que forneci anteriormente para os respectivos locais:
+
+#### Arquivos de Configuração (raiz do projeto):
+1. `tailwind.config.ts`
+2. `tsconfig.json`
+3. `package.json`
+
+#### Componentes (`src/components/`):
+1. `Button.tsx`
+2. `Card.tsx`
+3. `Navbar.tsx`
+
+#### App (`src/app/`):
+1. `layout.tsx`
+2. `page.tsx`
+3. `globals.css`
+
+#### Páginas internas:
+1. `src/app/planos/page.tsx`
+2. `src/app/contato/page.tsx`
+3. `src/app/seja-franqueado/page.tsx`
+
+### Passo 5: Instalar dependências
+
+```bash
+npm install
+```
+
+### Passo 6: Rodar o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Conteúdo dos Arquivos Adicionais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### `postcss.config.mjs`
 
-## Learn More
+```javascript
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
 
-To learn more about Next.js, take a look at the following resources:
+export default config;
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `next.config.mjs`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-## Deploy on Vercel
+export default nextConfig;
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### `.gitignore`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+```
+
+## 🎨 Personalização
+
+### Cores
+
+Edite `tailwind.config.ts` para alterar a paleta de cores:
+
+```typescript
+colors: {
+  primary: {
+    500: '#0c8ce9', // Azul principal
+  },
+  accent: {
+    300: '#ffd24a', // Amarelo CTA
+  },
+}
+```
+
+### Conteúdo
+
+Edite os arquivos `.tsx` dentro de `src/app/` para alterar textos e conteúdos.
+
+## 📦 Build para Produção
+
+```bash
+npm run build
+npm start
+```
+
+## 🌐 Deploy
+
+### Vercel (Recomendado)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+### Outras opções
+- Netlify
+- AWS Amplify
+- Google Cloud Run
+
+## 🛠️ Tecnologias
+
+- **Next.js 14** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **App Router** - Roteamento moderno
+
+## 📱 Responsividade
+
+O site é totalmente responsivo e funciona perfeitamente em:
+- 📱 Mobile (320px+)
+- 📱 Tablet (768px+)
+- 💻 Desktop (1024px+)
+- 🖥️ Large Desktop (1280px+)
+
+## ✨ Funcionalidades
+
+- ✅ Navegação fixa com menu mobile
+- ✅ Animações hover nos cards
+- ✅ Formulário com validação
+- ✅ Rotas funcionais
+- ✅ SEO otimizado
+- ✅ Performance otimizada
+
+## 📞 Suporte
+
+Para dúvidas ou problemas:
+1. Verifique se todas as dependências estão instaladas
+2. Limpe o cache: `rm -rf .next node_modules && npm install`
+3. Certifique-se de estar usando Node.js 18+
+
+## 📝 Licença
+
+Este projeto foi criado para uso educacional e comercial.
+
+---
+
+**Desenvolvido com ❤️ usando Next.js e Tailwind CSS**
