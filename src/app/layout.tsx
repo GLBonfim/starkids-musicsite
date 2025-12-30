@@ -1,39 +1,48 @@
-import type { Metadata } from "next";
+'use client';
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import LoadingScreen from "@/components/home/LoadingScreen";
+import { useState, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "StarKids - Educação Musical Infantil",
-  description: "Desperte o talento musical do seu filho com metodologia comprovada e ambiente acolhedor",
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <title>StarKids - Educação Musical Infantil</title>
+        <meta name="description" content="Desperte o talento musical do seu filho com metodologia comprovada e ambiente acolhedor" />
+      </head>
       <body className={inter.className}>
         <LoadingScreen />
         <AnimatedBackground />
-        <Navbar />
+        {!isLoading && <Navbar />}
         <div className="relative z-10">
           {children}
         </div>
         
         {/* Footer */}
-        <footer className="bg-[#0077BE] text-white py-12">
+        <footer className="bg-[#0077BE] text-white py-12 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-8 mb-8">
               {/* Logo e Descrição */}
@@ -51,8 +60,6 @@ export default function RootLayout({
                 </p>
               </div>
 
-              
-
               {/* Barra da Tijuca */}
               <div>
                 <h3 className="font-bold mb-4">Barra da Tijuca</h3>
@@ -66,7 +73,7 @@ export default function RootLayout({
                 </ul>
               </div>
 
-              {/* Contato */}
+              {/* Recreio */}
               <div>
                 <h3 className="font-bold mb-4">Recreio</h3>
                 <ul className="space-y-2 text-white/80 text-sm">
@@ -78,35 +85,33 @@ export default function RootLayout({
                   </li>
                 </ul>
               </div>
+            </div>
 
-              {/* Links Rápidos */}
-              <div>
-                <h3 className="font-bold mb-4">Links Rápidos</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="/" className="text-white/80 hover:text-[#ffb300] transition-colors">
-                      Início
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/planos" className="text-white/80 hover:text-[#ffb300] transition-colors">
-                      Nossos Planos
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/seja-franqueado" className="text-white/80 hover:text-[#ffb300] transition-colors">
-                      Seja um Franqueado
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/contato" className="text-white/80 hover:text-[#ffb300] transition-colors">
-                      Contato
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              
+            {/* Links Rápidos */}
+            <div className="mb-8">
+              <h3 className="font-bold mb-4 text-center">Links Rápidos</h3>
+              <ul className="flex flex-wrap justify-center gap-6">
+                <li>
+                  <a href="/" className="text-white/80 hover:text-[#ffb300] transition-colors">
+                    Início
+                  </a>
+                </li>
+                <li>
+                  <a href="/planos" className="text-white/80 hover:text-[#ffb300] transition-colors">
+                    Nossos Planos
+                  </a>
+                </li>
+                <li>
+                  <a href="/seja-franqueado" className="text-white/80 hover:text-[#ffb300] transition-colors">
+                    Seja um Franqueado
+                  </a>
+                </li>
+                <li>
+                  <a href="/contato" className="text-white/80 hover:text-[#ffb300] transition-colors">
+                    Contato
+                  </a>
+                </li>
+              </ul>
             </div>
 
             {/* Copyright */}
